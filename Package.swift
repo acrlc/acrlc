@@ -19,7 +19,6 @@ let package = Package(
   .package(url: "https://github.com/acrlc/Configuration.git", branch: "main"),
   .package(url: "https://github.com/acrlc/Command.git", branch: "main"),
   .package(url: "https://github.com/acrlc/Time.git", branch: "main"),
-  .package(url: "https://github.com/acrlc/Location.git", branch: "main"),
   .package(url: "https://github.com/acrlc/Acrylic.git", branch: "main"),
 
   // MARK: Server
@@ -107,7 +106,7 @@ let package = Package(
   .target(
    name: "Routes",
    dependencies: [
-    "Configuration", "Time", "Location",
+    "Configuration", "Time",
     .product(name: "Fluent", package: "fluent"),
     .product(name: "Vapor", package: "vapor"),
     .product(name: "PostgresKit", package: "postgres-kit"),
